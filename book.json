@@ -1,0 +1,8 @@
+{
+  "plugins": ["disqus","ga"],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "kejyun-php-learning-notes"
+    }
+  }
+}
