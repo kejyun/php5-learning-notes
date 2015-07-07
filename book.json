@@ -3,6 +3,9 @@
   "pluginsConfig": {
     "disqus": {
       "shortName": "kejyun-php-learning-notes"
+    },
+    "ga": {
+      "token": "UA-31063691-15"
     }
   }
 }
