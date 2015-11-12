@@ -1,0 +1,555 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>instanceof 無法運作 | PHP5 學習筆記</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../../framework/framework-README.html" />
+    
+    
+    <link rel="prev" href="../../namespace/question/namespace-question-README.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="2.1.1" data-basepath="../.." data-revision="Fri Nov 13 2015 07:36:23 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="class/class-README.html">
+            
+                
+                    <a href="../../class/class-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        類別
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="class/class.html">
+            
+                
+                    <a href="../../class/class.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        類別（Class）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="class/abstract-class.html">
+            
+                
+                    <a href="../../class/abstract-class.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        抽象類別（Abstract Class）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="class/interface.html">
+            
+                
+                    <a href="../../class/interface.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        介面（Interface）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="class/class-abstract-interface-compare.html">
+            
+                
+                    <a href="../../class/class-abstract-interface-compare.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        類別、抽象類別與介面比較
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="namespace/namespace-README.html">
+            
+                
+                    <a href="../../namespace/namespace-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        命名空間（Namespace）
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="namespace/question/namespace-question-README.html">
+            
+                
+                    <a href="../../namespace/question/namespace-question-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        常見問題
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1.1" data-path="namespace/question/namespace-question-instanceof-not-work.html">
+            
+                
+                    <a href="../../namespace/question/namespace-question-instanceof-not-work.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                        instanceof 無法運作
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="framework/framework-README.html">
+            
+                
+                    <a href="../../framework/framework-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        框架（Framework）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="trick/trick-README.html">
+            
+                
+                    <a href="../../trick/trick-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        小技巧
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="trick/trick-comment.html">
+            
+                
+                    <a href="../../trick/trick-comment.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        註解
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="packages/packages-README.html">
+            
+                
+                    <a href="../../packages/packages-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        套件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="design-pattern/design-pattern-README.html">
+            
+                
+                    <a href="../../design-pattern/design-pattern-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        設計模式
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="resource/resource-README.html">
+            
+                
+                    <a href="../../resource/resource-README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        學習資源
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="resource/resource-document.html">
+            
+                
+                    <a href="../../resource/resource-document.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        文件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="resource/resource-community.html">
+            
+                
+                    <a href="../../resource/resource-community.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        社群
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="resource/resource-learning-video.html">
+            
+                
+                    <a href="../../resource/resource-learning-video.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        教學影片
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="resource/resource-article.html">
+            
+                
+                    <a href="../../resource/resource-article.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        文章
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >PHP5 學習筆記</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="instanceof-%E7%84%A1%E6%B3%95%E9%81%8B%E4%BD%9C">instanceof &#x7121;&#x6CD5;&#x904B;&#x4F5C;</h1>
+<p>&#x5728;&#x6211;&#x4F7F;&#x7528; instanceof &#x53BB;&#x5224;&#x65B7;&#x662F;&#x5426;&#x70BA;&#x9589;&#x5305;&#x51FD;&#x5F0F;&#xFF08;Closure&#xFF09;&#x6642;&#xFF0C;&#x5224;&#x65B7;&#x51FA;&#x4F86;&#x7684;&#x7D50;&#x679C;&#x90FD;&#x70BA; false</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span> <span class="hljs-keyword">namespace</span> <span class="hljs-title">App</span>\<span class="hljs-title">Repositories</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Container</span>
+</span>{
+    <span class="hljs-keyword">protected</span> <span class="hljs-variable">$binds</span>;
+
+    <span class="hljs-keyword">protected</span> <span class="hljs-variable">$instances</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bind</span><span class="hljs-params">(<span class="hljs-variable">$abstract</span>, <span class="hljs-variable">$concrete</span>)</span>
+    </span>{
+        <span class="hljs-comment">// instanceof &#x5224;&#x65B7;&#x7D50;&#x679C;&#x7686;&#x70BA; false</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$concrete</span> <span class="hljs-keyword">instanceof</span> Closure) {
+            <span class="hljs-variable">$this</span>-&gt;binds[<span class="hljs-variable">$abstract</span>] = <span class="hljs-variable">$concrete</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-variable">$this</span>-&gt;instances[<span class="hljs-variable">$abstract</span>] = <span class="hljs-variable">$concrete</span>;
+        }
+    }
+}
+</code></pre>
+<p>&#x56E0;&#x70BA;&#x6211;&#x6709;&#x4F7F;&#x7528;&#x547D;&#x540D;&#x7A7A;&#x9593;&#x53BB;&#x5EFA;&#x7ACB;&#x985E;&#x5225;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x89E3;&#x6C7A;&#x9019;&#x6A23;&#x7684;&#x554F;&#x984C;&#x6709;&#x5169;&#x500B;&#x65B9;&#x6CD5;</p>
+<ol>
+<li>&#x5728;&#x985E;&#x5225;&#x6700;&#x4E0A;&#x65B9;&#x4F7F;&#x7528; <code>use \Closure;</code> &#x6B63;&#x78BA;&#x5730;&#x53BB;&#x5F15;&#x5165;&#x9589;&#x5305;&#x985E;&#x5225;</li>
+<li>&#x4F7F;&#x7528; <code>instanceof \Closure</code> &#x53BB;&#x5224;&#x65B7;&#x985E;&#x5225;</li>
+</ol>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-comment">// &#x65B9;&#x6CD5; 1</span>
+<span class="hljs-keyword">use</span> \<span class="hljs-title">Closure</span>;
+
+<span class="hljs-comment">// &#x65B9;&#x6CD5; 2</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$concrete</span> <span class="hljs-keyword">instanceof</span> \Closure) {
+    <span class="hljs-variable">$this</span>-&gt;binds[<span class="hljs-variable">$abstract</span>] = <span class="hljs-variable">$concrete</span>;
+}
+</code></pre>
+<p>&#x7576;&#x4F60;&#x4F7F;&#x7528;&#x547D;&#x540D;&#x7A7A;&#x9593;&#x53BB;&#x5EFA;&#x7ACB;&#x4F60;&#x7684;&#x985E;&#x5225;&#xFF0C;&#x4E14;&#x8981;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x547D;&#x540D;&#x7A7A;&#x9593;&#x7684;&#x985E;&#x5225;&#x6642;&#xFF0C;&#x90FD;&#x8981;&#x78BA;&#x4FDD;&#x5728;&#x6700;&#x4E0A;&#x9762;&#x6709;&#x4F7F;&#x7528; use &#x53BB;&#x5F15;&#x5165;&#x4F60;&#x8981;&#x7528;&#x7684;&#x985E;&#x5225;&#x547D;&#x540D;&#x7A7A;&#x9593;&#xFF0C;&#x6216;&#x8005;&#x6307;&#x5B9A;&#x8A72;&#x985E;&#x5225;&#x6B63;&#x78BA;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x9593;&#x3002;</p>
+<h2 id="%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99">&#x53C3;&#x8003;&#x8CC7;&#x6599;</h2>
+<ul>
+<li><a href="http://stackoverflow.com/questions/17305002/instanceof-closure-returns-false" target="_blank">instanceof Closure returns false</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../namespace/question/namespace-question-README.html" class="navigation navigation-prev " aria-label="Previous page: 常見問題"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../framework/framework-README.html" class="navigation navigation-next " aria-label="Next page: 框架（Framework）"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"disqus":{"shortName":"kejyun-php-learning-notes"},"ga":{"token":"UA-31063691-15","configuration":"auto"}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-31063691-15', 'auto');ga('send', 'pageview');</script>
+    </body>
+    
+</html>
