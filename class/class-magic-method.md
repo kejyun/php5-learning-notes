@@ -12,3 +12,4 @@
 
 ## 參考資料
 * [逐步提昇PHP技術能力 - PHP的語言特性 ： magic methods - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10135522)
+* [PHP: Magic Methods - Manual](http://php.net/manual/en/language.oop5.magic.php)
