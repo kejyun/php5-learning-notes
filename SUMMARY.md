@@ -14,6 +14,8 @@
   * [註解](trick/trick-comment.md)
 * [套件](packages/packages-README.md)
 * [設計模式](design-pattern/design-pattern-README.md)
+* [除錯](debug/debug-README.md)
+  * [記憶體](debug/debug-memory.md)
 * [學習資源](resource/resource-README.md)
   * [文件](resource/resource-document.md)
   * [社群](resource/resource-community.md)
